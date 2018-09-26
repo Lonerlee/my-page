@@ -52,6 +52,8 @@ p {
 
 #showMenu {
   display: block;
+  margin: 6px;
+  font-weight: bold;
 }
 
 /* .nav:hover {
