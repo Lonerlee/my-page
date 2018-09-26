@@ -1,0 +1,39 @@
+/* HEADER */
+
+/* NAVIGATION */
+
+.menu {
+  text-align: left;
+}
+
+#showMenu {
+  display: none;
+}
+
+#nav {
+  display: block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* MAIN */
+
+.main {
+  display: flex;
+}
+
+.content {
+  display: flex;
+}
+
+.main-content {
+  flex: 4;
+}
+
+.container {
+  flex: 3;
+}
+
+/* FOOTER */

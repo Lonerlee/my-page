@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" media="screen and (min-width: 550px)" href="styles/min-550px.css">
+    <link rel="stylesheet" media="screen and (min-width: 870px)" href="styles/min-870px.css">
+
+    <script>
+
+        var img = { home1: "025-mountain.png", home2: "005-fist.png", home3: "018-ladder.png", projects1: "044-cogwheel.png", projects2: "045-spaceship.png", projects3: "047-bulb.png", author1: "031-student.png", author2: "039-rising.png", author3: "048-diploma.png" };
+
+        var displayed = 0;
+        var width = 550;
+        function showMenu() {
+            if (displayed === 0) {
+                document.getElementById("nav").style.display = "block";
+                displayed++;
+            } else {
+                document.getElementById("nav").style.display = "none";
+                displayed = 0;
+            }
+        }
+
+        /*EventListener needed to check if resized window is greater than breakpoint and needed to always show navigation*/
+        window.addEventListener("resize", function () {
+            if (window.innerWidth >= width) {
+                document.getElementById("nav").style.display = "block";
+                displayed = 1;
+            }
+        });
+        function home() {
+            document.getElementById("HomeMain").style.display = "block";
+            document.getElementById("Home1").style.display = "block";
+            document.getElementById("Home2").style.display = "block";
+            document.getElementById("ProjectsMain").style.display = "none";
+            document.getElementById("Projects1").style.display = "none";
+            document.getElementById("Projects2").style.display = "none";
+            document.getElementById("AuthorMain").style.display = "none";
+            document.getElementById("Author1").style.display = "none";
+            document.getElementById("Author2").style.display = "none";
+            document.getElementById("mainImage").src = "images/" + img.home1;
+            document.getElementById("secondaryImage").src = "images/" + img.home2;
+            document.getElementById("thirdImage").src = "images/" + img.home3;
+        }
+        function projects() {
+            document.getElementById("HomeMain").style.display = "none";
+            document.getElementById("Home1").style.display = "none";
+            document.getElementById("Home2").style.display = "none";
+            document.getElementById("ProjectsMain").style.display = "block";
+            document.getElementById("Projects1").style.display = "block";
+            document.getElementById("Projects2").style.display = "block";
+            document.getElementById("AuthorMain").style.display = "none";
+            document.getElementById("Author1").style.display = "none";
+            document.getElementById("Author2").style.display = "none";
+            document.getElementById("mainImage").src = "images/" + img.projects1;
+            document.getElementById("secondaryImage").src = "images/" + img.projects2;
+            document.getElementById("thirdImage").src = "images/" + img.projects3;
+        }
+        function author() {
+            document.getElementById("HomeMain").style.display = "none";
+            document.getElementById("Home1").style.display = "none";
+            document.getElementById("Home2").style.display = "none";
+            document.getElementById("ProjectsMain").style.display = "none";
+            document.getElementById("Projects1").style.display = "none";
+            document.getElementById("Projects2").style.display = "none";
+            document.getElementById("AuthorMain").style.display = "block";
+            document.getElementById("Author1").style.display = "block";
+            document.getElementById("Author2").style.display = "block";
+            document.getElementById("mainImage").src = "images/" + img.author1;
+            document.getElementById("secondaryImage").src = "images/" + img.author2;
+            document.getElementById("thirdImage").src = "images/" + img.author3;
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <h2>Setting Your Goals High~!</h2>
+        <label onclick="showMenu()" id="showMenu">&#9776;</label>
+    </header>
+    <main class="main">
+        <nav id="nav">
+            <div class="menu">
+                <a onclick="home()">Home</a>
+                <a onclick="projects()">Projects</a>
+                <a onclick="author()">Author</a>
+            </div>
+        </nav>
+        <div class="content">
+            <section class="main-content">
+                <div class="img-container">
+                    <img src="images/025-mountain.png" id="mainImage" alt="MAIN IMAGE" /></div>
+                <article id="HomeMain">
+                    <h2>Climbing That Mountain</h2>
+                    <p>It is very important to know what you can and cannot do. Whatever you want to do, remember that
+                        you are master of your own mind.</p>
+                    <iframe src="https://www.youtube.com/embed/arj7oStGLkU" allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+                </article>
+                <article id="ProjectsMain">
+                    <h2>Future Content</h2>
+                    <p>Here is the place for future content, it will be placed here after I will finish some other
+                        projects. I want to place some content here later.</p>
+                </article>
+                <article id="AuthorMain">
+                    <h2>Future Content</h2>
+                    <p>Here is the place for future content, it will be placed here after I will finish some other
+                        projects. I want to place some content here later.</p>
+                </article>
+            </section>
+            <div class="container">
+                <section class="secondary-content">
+                    <div class="img-container">
+                        <img src="images/005-fist.png" id="secondaryImage" alt="SECONDARY IMAGE" /></div>
+                    <article id="Home1">
+                        <h2>Future Content</h2>
+                        <p>Here is the place for future content, it will be placed here after I will finish some other
+                            projects. I want to place some content here later.</p>
+                    </article>
+                    <article id="Projects1">
+                        <h2>Future Content</h2>
+                        <p>Here is the place for future content, it will be placed here after I will finish some other
+                            projects. I want to place some content here later.</p>
+                    </article>
+                    <article id="Author1">
+                        <h2>Future Content</h2>
+                        <p>Here is the place for future content, it will be placed here after I will finish some other
+                            projects. I want to place some content here later.</p>
+                    </article>
+                </section>
+                <section class="secondary-content">
+                    <div class="img-container">
+                        <img src="images/018-ladder.png" id="thirdImage" alt="SECONDARY IMAGE" /></div>
+                    <article id="Home2">
+                        <h2>Future Content</h2>
+                        <p>Here is the place for future content, it will be placed here after I will finish some other
+                            projects. I want to place some content here later.</p>
+                    </article>
+                    <article id="Projects2">
+                        <h2>Future Content</h2>
+                        <p>Here is the place for future content, it will be placed here after I will finish some other
+                            projects. I want to place some content here later.</p>
+                    </article>
+                    <article id="Author2">
+                        <h2>Future Content</h2>
+                        <p>Here is the place for future content, it will be placed here after I will finish some other
+                            projects. I want to place some content here later.</p>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <h4>Page created by Sokal Sebastian with use of flaticons. <a href="license/license.html" target="_blank">LICENSE</a></h4>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+body {
+  display: flex;
+  background-color: #000712;
+  flex-direction: column;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+iframe {
+  width: 600px;
+  height: 200px;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #f89554;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  color: #f2e2dd;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* HEADER */
+
+.header {
+  padding: 2%;
+  background-color: #00213a;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  float: right;
+}
+
+/* NAVIGATION */
+
+#nav {
+  padding: 2px;
+  display: none;
+  background-color: black;
+}
+
+#showMenu {
+  display: block;
+}
+
+/* .nav:hover {
+} */
+
+.menu {
+  text-align: center;
+}
+
+.menu a {
+  display: block;
+  padding: 6px;
+  margin: 4px;
+  margin-bottom: 4px;
+  background-color: #00213a;
+}
+
+.menu a:link,
+a:visited {
+  color: #f89554;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #426c79;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+label {
+  color: #f89554;
+  cursor: pointer;
+}
+
+/* MAIN */
+
+a,
+a:hover,
+a:link,
+a:visited {
+  color: #f89554;
+  text-decoration: none;
+}
+
+.main {
+  background-color: #000712;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  border: solid 2px black;
+}
+
+.main-content,
+.secondary-content {
+  padding: 2px;
+  margin: 2px;
+  background-color: #426c79;
+}
+
+.secondary-content {
+  width: 100%;
+}
+
+.img-container {
+  text-align: center;
+  margin-top: 4px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 90%;
+  align-self: center;
+  background-color: #00213a;
+  border: 4px #426c79 dashed;
+  width: 100%;
+  margin: 4px;
+}
+
+#ProjectsMain,
+#Projects1,
+#Projects2,
+#AuthorMain,
+#Author1,
+#Author2 {
+  display: none;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #00213a;
+  padding: 15px;
+}
+
+.footer a {
+  background-color: #426c79;
+}
+
+/* COLOR PALETTE : 
+DARK BG: #000712
+BG: #00213a
+BASIC: #426c79
+LIGHT:#f2e2dd
+IMPORTANT:#f89554
+*/
