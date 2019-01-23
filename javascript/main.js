@@ -1,17 +1,49 @@
 var img = {
-  home1: "025-mountain.png",
-  home2: "005-fist.png",
-  home3: "018-ladder.png",
-  projects1: "044-cogwheel.png",
-  projects2: "045-spaceship.png",
-  projects3: "047-bulb.png",
-  author1: "031-student.png",
-  author2: "039-rising.png",
-  author3: "048-diploma.png"
+  home1: "mountain-large.png",
+  home2: "fist-large.png",
+  home3: "ladder-large.png",
+  projects1: "cogwheel-large.png",
+  projects2: "spaceship-large.png",
+  projects3: "bulb-large.png",
+  author1: "student-large.png",
+  author2: "rising-large.png",
+  author3: "diploma-large.png"
 };
+
+function mediaQuery(x) {
+  if (x.matches) {
+    img = {
+      home1: "mountain-small.png",
+      home2: "fist-small.png",
+      home3: "ladder-small.png",
+      projects1: "cogwheel-small.png",
+      projects2: "spaceship-small.png",
+      projects3: "bulb-small.png",
+      author1: "student-small.png",
+      author2: "rising-small.png",
+      author3: "diploma-small.png"
+    };
+  } else {
+    img = {
+      home1: "mountain-large.png",
+      home2: "fist-large.png",
+      home3: "ladder-large.png",
+      projects1: "cogwheel-large.png",
+      projects2: "spaceship-large.png",
+      projects3: "bulb-large.png",
+      author1: "student-large.png",
+      author2: "rising-large.png",
+      author3: "diploma-large.png"
+    };
+  }
+}
+
+var x = window.matchMedia("(max-width: 550px)");
+mediaQuery(x);
 
 var displayed = 0;
 var width = 550;
+
 function showMenu() {
   if (displayed === 0) {
     document.getElementById("nav").style.display = "block";
